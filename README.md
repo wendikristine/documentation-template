@@ -1,8 +1,7 @@
-<html>
-<head>
-<link rel="stylesheet" href="assets/modest.css">
-</head>
-</html>
+---
+---
+
+@import "{{ site.theme }}";
 
 # Documentation _for those who Dislike Documentation_
 
