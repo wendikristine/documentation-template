@@ -35,7 +35,10 @@ After the repository has been forked, you are ready to move to the GitBook setup
 
 #### GitBook Setup
 - First, you will be asked to create a new organization.    
-  ![Create a new org](screenshots/new-org.png)
+
+  <a target="_new" href="screenshots/new-org.png"><img src="screenshots/new-org.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a>   
+  <!-- o_ -->
+
 
 - Name your organization, perhaps using the name of the department or employer name. Click `Next` to choose a URL for the organization. Click `Next` again to name the project. Each organization may have several projects. Lastly, choose your level of privacy: Public, Unlisted, or Public. Finalize your choices and continue.
 
