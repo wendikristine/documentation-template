@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Documentation for those who Dislike Documenting"
 categories: guide
 author: Wendi Sapp
 tags:
   - research computing
   - docs
 ---
+# Documentation<br>_for those who dislike documentation_
 
 **Tools Used:**
 - Git (_optional_)
