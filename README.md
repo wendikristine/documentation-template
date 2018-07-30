@@ -2,6 +2,7 @@
 ---
 
 @import "{{ site.theme }}";
+assets/css/style.scss
 
 # Documentation _for those who Dislike Documentation_
 
