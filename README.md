@@ -1,6 +1,7 @@
 ---
 ---
 
+title: Documentation
 @import "{{ site.theme }}";
 assets/css/style.scss
 
