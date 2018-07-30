@@ -8,6 +8,7 @@
   {% assign description = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | escape %}
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
   {% if page.keywords %}
     {% if page.keywords.first %}
       {% assign keywords = page.keywords | join: ',' %}
