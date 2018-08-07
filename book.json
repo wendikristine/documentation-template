@@ -6,7 +6,7 @@
             "style": "background: none;"
       }
       "insert-logo-link": {
-            "src": "/my-logo.png",
+            "src": "/logo_square.png",
             url: "http://docpantry.cirruspublications.com/"
       }
   }
