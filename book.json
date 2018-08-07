@@ -1,0 +1,13 @@
+{
+  "plugins": ["insert-logo", "insert-logo-link"],
+  "pluginsConfig": {
+      "insert-logo": {
+            "url": "https://github.com/wendikristine/documentation-template/blob/master/logo_square.png"
+            "style": "background: none;"
+      }
+      "insert-logo-link": {
+            "src": "/my-logo.png",
+            url: "http://docpantry.cirruspublications.com/"
+      }
+  }
+}
