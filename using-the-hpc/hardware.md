@@ -1,5 +1,3 @@
-[CADES](http://support.cades.ornl.gov/) → [User Documentation](../README.md) → [HPC Condo User Guide](overview.md) → [Hardware Configuration](hardware.md)
-
 # HPC Condo Hardware Configuration
 
 The HPC is a commodity cluster that contains a set of [MPPs (Massive Parallel Processors)](https://en.wikipedia.org/wiki/Massively_parallel).

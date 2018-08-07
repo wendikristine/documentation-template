@@ -1,6 +1,6 @@
 # Prerequisites
 
-To properly utilize HPC Condos, you will need a couple of utilities loaded on your local machine. These utilities are free and widely used for this type of application.
+To properly utilize the HPC, you will need a couple of utilities loaded on your local machine. These utilities are free and widely used for this type of application.
 
 * Required: **SSH client**
 * Recommended: **Bash terminal**

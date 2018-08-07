@@ -155,7 +155,3 @@ Hello world
 ### General remarks
 1. Note that the above workflows will run on login nodes. In order for them to run over compute nodes, more configuration is needed.
 -  Note that `Nextflow` expects absolute paths for data and executables since it works in its own temp directory. Please adjust the paths to where you choose to run the workflow.
-
-### Where to go from here?
-* Use the [Crystal Workflow](condo-crystal-workflow.md) with these workflow tools.
-* Come talk to us at CADES if you think one or more of your applications will benefit with the help of the aforementioned workflow tools.
