@@ -1,4 +1,4 @@
-# Documentation _for those who Dislike Documentation_
+# 1 Documentation _for those who Dislike Documentation_
 
 **Tools Used:**
 - Git (_optional_)
