@@ -1,10 +1,11 @@
 ---
 layout: post
+title: Documentation
 author: Wendi Sapp
 permalink: /doc-template/
 keywords: written communication, cyberinfrastructure, computational research facilitation
 ---
-## Documentation <br>_for those who dislike documentation_
+## _for those who dislike documentation_
 
 **Tools Used:**
 - Git (_optional_)
