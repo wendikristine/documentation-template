@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 author: Wendi Sapp
-tags:
-  - research computing
-  - docs
+permalink: /doc-template/
 keywords: written communication, cyberinfrastructure, computational research facilitation
 ---
 # Documentation<br>_for those who dislike documentation_
