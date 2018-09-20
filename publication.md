@@ -16,11 +16,15 @@ Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et d
 
 Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  At vero eos et accusam et justo duo dolores et ea rebum.  Lorem ipsum dolor sit amet,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  
 
+<hr>
+
 ## Types of Publications
 
 - Education
 - CI Research
 - Social Impact
+
+<hr>
 
 ## Exercises
 
@@ -31,6 +35,8 @@ Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et d
 #### Exercise 2
 
 Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  At vero eos et accusam et justo duo dolores et ea rebum.  Lorem ipsum dolor sit amet,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  
+
+<hr>
 
 ## Conclusion
 
