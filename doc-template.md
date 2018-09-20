@@ -43,7 +43,7 @@ After the repository has been forked, you are ready to move to the GitBook setup
 #### GitBook Setup
 - First, you will be asked to create a new organization.    
 
-  <a target="_new" href="screenshots/new-org.png"><img src="screenshots/new-org.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a>   
+  <a target="_new" href="http://docpantry.cirruspublications.com/screenshots/new-org.png"><img src="http://docpantry.cirruspublications.com/screenshots/new-org.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a>   
   <!-- o_ -->
 
 
