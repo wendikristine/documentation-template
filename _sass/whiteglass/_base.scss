@@ -99,12 +99,12 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: lighten($brand-color, 10%);
+  color: lighten($brand-color, 20%);
   text-decoration: none;
   font-weight: bold;
 
   &:visited {
-    color: lighten($brand-color, 10%);
+    color: lighten($brand-color, 20%);
   }
 
   &:hover {
