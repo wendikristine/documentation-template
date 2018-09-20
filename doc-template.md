@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 author: Wendi Sapp
 permalink: /doc-template/
 keywords: written communication, cyberinfrastructure, computational research facilitation
