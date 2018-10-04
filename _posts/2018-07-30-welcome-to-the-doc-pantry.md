@@ -13,6 +13,8 @@ Communication is the core of accomplishing anything in any field. As computation
 
 What's more, is the audiences we communicate are just as diverse as we are. Considering this diversity is an important part of every writing project.
 
+
+
 #### Motivation
 
 No one in this field works in a vacuum. There are numerous stakeholders when it comes to research computing cyberinfrastructure and projects. Many general rules apply to writing for stakeholders and we, as professionals in an interdisciplinary space, are faced with a unique communication climate in which clear, concise language is of the utmost importance. Improving our written communication skills can increase our ability to assist researchers in their projects, convey our needs to administration, and celebrate our achievements with the community.   
@@ -25,9 +27,9 @@ The lessons here are designed to inform readers about the common types of writte
 
 ## Lessons
 
-- [Documentation](/documentation/)
-- [Publication](/publication/)
-- [Grants](/grants/)
+- [Technical Documentation](/documentation/)
+- [Journal Publications](/publication/)
+- [Proposals & Grants](/grants/)
 - [Science Communication](/sci-comm/)
 
 <hr>
