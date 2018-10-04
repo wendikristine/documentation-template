@@ -1,4 +1,4 @@
-# Scheduling Tasks with cron
+# Task Manager \(crontab, at\)
 
 📝 **Note:** The majority of the following commands must be run by the superuser @root
 
@@ -10,7 +10,7 @@ That means that you can use `crontab` to automatically create backups, synchroni
 
 The main configuration file for cron is `/etc/crontab`. If you view the content of it, it will display:
 
-```
+```text
 # Example of job definition:
 # .---------------- minute (0 - 59)
 # | .------------- hour (0 - 23)
@@ -21,23 +21,23 @@ The main configuration file for cron is `/etc/crontab`. If you view the content 
 # * * * * * user-name command to be executed
 ```
 
-- #### List programmed tasks
+* **List programmed tasks**
 
   ```bash
   crontab -l
   ```
 
-  _It will list the crontabs that are currently running on your environment, if you are a `root` user, you can list all the crons that the system has._
+  _It will list the crontabs that are currently running on your environment, if you are a_ `root` _user, you can list all the crons that the system has._
 
   If you have not set any jobs, it will display a message such as `crontab: no crontab for x0y`.
 
-- #### Edit the list of cronjobs
+* **Edit the list of cronjobs**
 
   ```bash
   crontab -e
   ```
 
-  _The option `e` let you edit a list of tasks. You can set some tasks using this format:_
+  _The option_ `e` _let you edit a list of tasks. You can set some tasks using this format:_
 
   ```bash
   # Every hour, at the minute 37, a copy will take place
@@ -67,7 +67,7 @@ echo '5 p.m. meeting with Carol' | mail raithel
 Job c00ceb7fb.01 will be executed using /bin/sh
 ```
 
-_The `at` command takes input up to the end-of-file character (`ctrl` `D` while at the beginning of a line). It reports the job number and informs you that it will use `/bin/sh` to execute the command. An email to raithel will be sent at 4:55pm on Friday with the Subject: '5 p.m. meeting with Carol'._
+_The_ `at` _command takes input up to the end-of-file character \(_`ctrl` __`D` _while at the beginning of a line\). It reports the job number and informs you that it will use_ `/bin/sh` _to execute the command. An email to raithel will be sent at 4:55pm on Friday with the Subject: '5 p.m. meeting with Carol'._
 
 To program a script from `now`, you may add hours, minutes, or seconds with the `+` symbol, e.g.:
 
@@ -80,6 +80,6 @@ Job c00ceb7fb.00 will be executed using /bin/sh
 
 _This script will notify you with a beep in 25 minutes._
 
-- To get a list of your pending at jobs, enter `atq`. If you are superuser, `atq` shows you the pending `at` jobs of all users.
+* To get a list of your pending at jobs, enter `atq`. If you are superuser, `atq` shows you the pending `at` jobs of all users.
+* To delete a job, enter `atrm job_number` where `job_number` is the job number returned by `atq`. The superuser can also remove other user's jobs.
 
-- To delete a job, enter `atrm job_number` where `job_number` is the job number returned by `atq`. The superuser can also remove other user's jobs.
