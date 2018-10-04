@@ -8,8 +8,8 @@ We are here to help!
 
 | Day       | Open  | Close |
 | --------- | ----- | ----- |
-| Monday    | 9 AM  | 2 PM  |
-| Tuesday   | 9 AM  | 2 PM  |
+| Monday    | 9 AM  | 1 PM  |
+| Tuesday   | 10 AM  | 2 PM  |
 | Wednesday | 11 AM | 4 PM  |
 | Thursday  | 11 AM | 4 PM  |
 | Friday    | 9 AM  | 1 PM  |
