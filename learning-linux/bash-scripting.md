@@ -2,21 +2,18 @@
 
 ## Considerations
 
-- It is crucial that the first line of the Bash script begins with the header `#!/bin/bash`.
-
-- The extension of a file which represents a script should be `.sh`.
-
-- Comments in Bash begin with `#` and run to the end of the line:
+* It is crucial that the first line of the Bash script begins with the header `#!/bin/bash`.
+* The extension of a file which represents a script should be `.sh`.
+* Comments in Bash begin with `#` and run to the end of the line:
 
   ```bash
   echo Hello, World. # prints out "Hello, World."
   ```
 
-- To execute a script, you must be sure your file has the permission to be executed `chmod +x your_script.sh`. Click [here](file-permissions.md) to see more about permissions.
+* To execute a script, you must be sure your file has the permission to be executed `chmod +x your_script.sh`. Click [here](file-permissions.md) to see more about permissions.
+* If you are located in the same PATH were you created the script, you execute your script by running `./your_script.sh`.
 
-- If you are located in the same PATH were you created the script, you execute your script by running `./your_script.sh`.
-
-## Conditionals (Decision Control Structure)
+## Conditionals \(Decision Control Structure\)
 
 Use conditionals to specify different courses of action to be taken. In this case, we have three possibilities to check a number in a range of other values:
 
@@ -39,7 +36,7 @@ else
 
 Read more examples about [if conditionals](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html).
 
-## Loops (Repetitive tasks)
+## Loops \(Repetitive tasks\)
 
 In a loop, commands will continue to run repeatedly until a task is executed for all elements. One useful command for loop calculations is `for`. Here is an example of printing numbers from 1 to 9:
 
@@ -58,13 +55,13 @@ If you want to have all the numbers in the same line, add the `-n` option. If yo
 for i in {1..9}; do echo -n "$((i+4))  " ;  done
 ```
 
-- Click [here](https://www.tldp.org/LDP/abs/html/loops1.html) to see more examples.
+* Click [here](https://www.tldp.org/LDP/abs/html/loops1.html) to see more examples.
 
-## Working with files (combining conditionals with Bash commands)
+## Working with files \(combining conditionals with Bash commands\)
 
 Check the existence of a file to determine the size of the file as well the quantity of words:
 
-```bash    
+```bash
 #!/bin/bash
 #Clear the terminal
 tput clear
@@ -82,9 +79,9 @@ else
 fi
 ```
 
-📝 It is important to indent the code in the `if` block with 4 spaces. Also include 1 space between the _contents_ of the brackets (`[` and `]`) and the brackets themselves.
+📝 It is important to indent the code in the `if` block with 4 spaces. Also include 1 space between the _contents_ of the brackets \(`[` and `]`\) and the brackets themselves.
 
-## Working with filesystems (combining conditionals with Bash commands)
+## Working with filesystems \(combining conditionals with Bash commands\)
 
 Send an email if disk usage in the system has reached 90% or more:
 
@@ -108,4 +105,5 @@ do
 done
 ```
 
-_You can learn more about Bash scripting by taking a look at this [tutorial](http://www.tldp.org/LDP/abs/html/)._
+_You can learn more about Bash scripting by taking a look at this_ [_tutorial_](http://www.tldp.org/LDP/abs/html/)_._
+

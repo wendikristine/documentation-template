@@ -1,7 +1,7 @@
-# Compiler Toolchains
+# Compilers
 
-The HPC supports four _programming environment (PE)_ modules to easily switch between compilers. Each programming environment contains the full set of compatible compilers and libraries.<br>
-These compilers are: [GNU Collection Compiler (GCC)](https://gcc.gnu.org), the [Intel compiler](https://software.intel.com/en-us/intel-compilers), [The Portland Group (PGI)](https://www.pgroup.com), and the [Numerical Algorithms Group (NAG)](https://www.nag.com/nag-compiler).
+HPC supports four _programming environment \(PE\)_ modules to easily switch between compilers. Each programming environment contains the full set of compatible compilers and libraries.  
+ These compilers are: [GNU Collection Compiler \(GCC\)](https://gcc.gnu.org), the [Intel compiler](https://software.intel.com/en-us/intel-compilers), [The Portland Group \(PGI\)](https://www.pgroup.com), and the [Numerical Algorithms Group \(NAG\)](https://www.nag.com/nag-compiler).
 
 📝 **Note:** You cannot use more than one `PE-module` at the same time. For example, if you are working with GNU and then you decide to work with the Intel compiler, first unload the `PE-gnu` module and then load `PE-intel`.
 
@@ -28,14 +28,15 @@ $ module display PE-gnu
 -------------------------------------------------------------------
 /software/dev_tools/swtree/cs400/modulefiles/PE-gnu/1.0:
 
-module-whatis  PE-gnu defines the environment needed to build
-               applications using GNU compiler suites on this system.
-conflict       PE-gnu PE-intel PE-pgi
+module-whatis     PE-gnu defines the environment needed to build
+
+                 applications using GNU compiler suites on this system.
+conflict     PE-gnu PE-intel PE-pgi
 setenv         PE_NAME GNU
 setenv         PE_CC mpicc
 setenv         PE_CXX mpic++
 setenv         PE_FORTRAN mpif90
-prepend-path   PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
+prepend-path     PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
 module         load xalt
 -------------------------------------------------------------------
 ```
@@ -51,7 +52,7 @@ Currently Loaded Modulefiles:
 
 ## The Intel Compiler Suite
 
-If you are working with another module, first you need to unload it.
+📝 If you are working with another module, first you need to unload it.
 
 ```bash
 module load PE-intel
@@ -70,21 +71,22 @@ module display PE-intel
 -------------------------------------------------------------------
 /software/dev_tools/swtree/cs400/modulefiles/PE-intel/1.0:
 
-module-whatis  PE-intel defines the environment needed to build
-               applications using Intel compiler suites on this system.
-conflict       PE-gnu PE-intel PE-pgi
+module-whatis     PE-intel defines the environment needed to build
+
+                 applications using Intel compiler suites on this system.
+conflict     PE-gnu PE-intel PE-pgi
 setenv         PE_NAME INTEL
 setenv         PE_CC mpicc
 setenv         PE_CXX mpic++
 setenv         PE_FORTRAN mpif90
-prepend-path   PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
+prepend-path     PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
 module         load xalt
 -------------------------------------------------------------------
 ```
 
 ## The Portland Group Compiler Suite
 
-If you are working with another module, first you need to unload it.
+📝 If you are working with another module, first you need to unload it.
 
 ```bash
 module load PE-pgi
@@ -103,21 +105,22 @@ $ module display PE-pgi
 -------------------------------------------------------------------
 /software/dev_tools/swtree/cs400/modulefiles/PE-pgi/1.0:
 
-module-whatis  PE-pgi defines the environment needed to build
-               applications using PGI compiler suites on this system.
-conflict       PE-gnu PE-intel PE-pgi
+module-whatis     PE-pgi defines the environment needed to build
+
+                 applications using PGI compiler suites on this system.
+conflict     PE-gnu PE-intel PE-pgi
 setenv         PE_NAME PGI
 setenv         PE_CC mpicc
 setenv         PE_CXX mpic++
 setenv         PE_FORTRAN mpif90
-prepend-path   PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
+prepend-path     PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
 module         load xalt
 -------------------------------------------------------------------
 ```
 
 ## The Numerical Algorithm Group Compiler Suite
 
-If you are working with another module, first you need to unload it.
+📝 If you are working with another module, first you need to unload it.
 
 ```bash
 module load PE-nag
@@ -136,19 +139,21 @@ $ module display PE-nag
 -------------------------------------------------------------------
 /software/dev_tools/swtree/cs400/modulefiles/PE-nag/1.0:
 
-module-whatis  PE-nag defines the environment needed to build
-               applications using NAG Fortran compiler on this system.
-conflict       PE-gnu PE-intel PE-pgi
+module-whatis     PE-nag defines the environment needed to build
+
+                 applications using NAG Fortran compiler on this system.
+conflict     PE-gnu PE-intel PE-pgi
 setenv         PE_NAME NAG
 setenv         PE_CC mpicc
 setenv         PE_CXX mpic++
 setenv         PE_FORTRAN mpif90
-prepend-path   PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
+prepend-path     PATH /software/dev_tools/swtree/cs400_centos7.2_pe2016-08/PE/1.0/noarch/bin
 module         load xalt
 -------------------------------------------------------------------
 ```
 
 ### Related Information
 
-- [Environment Customization](condos/software/environment.md)
-- [Modules](condos/software/modules.md)
+* [Environment Customization](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/using-the-hpc/how-to-use/condos/software/environment.md)
+* [Modules](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/using-the-hpc/how-to-use/condos/software/modules.md)
+

@@ -5,14 +5,15 @@ To properly utilize HPC Condos, you will need a couple of utilities loaded on yo
 * Required: **SSH client**
 * Recommended: **Bash terminal**
 
-### MacOS and Linux
+## MacOS and Linux
+
 Both macOS and Linux distributions include a Bash terminal and an SSH client by default. No additional software should be required to access HPC Condos.
 
-### Windows Users
+## Windows Users
 
 Windows does not have a native SSH client or a native Bash terminal. A few solutions are linked below.
 
 * Option 1: [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) - SSH client and Bash environment for Windows.
-* Option 2: [MobaXterm](https://mobaxterm.mobatek.net/) - A generally friendly client with automatic X-11 forwarding and built-in FTP interface.
-* Option 3: [Git Bash](https://git-scm.com/download/win) – Part of the Git for Windows environment includes Git Bash, which provides a light weight ssh client.
-* Option 4: [Cygwin](http://www.cygwin.com) – If you wish to have Bash-style functions on your Windows machine, then you should consider installing Cygwin, which ports the Portable Operating System Interface (POSIX) system calls and environment to Windows.
+* Option 2: [Git Bash](https://git-scm.com/download/win) – Part of the Git for Windows environment includes Git Bash, which provides a light weight ssh client.
+* Option 3: [Cygwin](http://www.cygwin.com) – If you wish to have Bash-style functions on your Windows machine, then you should consider installing Cygwin, which ports the Portable Operating System Interface \(POSIX\) system calls and environment to Windows.
+

@@ -1,15 +1,11 @@
-# Protocols
+# Communication Protocols
 
 Protocols are a set of rules or standards that define the communication between devices on a network.
 
-<!-- TOC depthFrom:2 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Generalities of a Service](#generalities-of-a-service)
-- [The `ssh` Protocol](#the-ssh-protocol)
-- [The `scp` Protocol](#the-scp-protocol)
-- [The `nfs` Protocol](#the-nfs-protocol)
-
-<!-- /TOC -->
+* [Generalities of a Service](protocols.md#generalities-of-a-service)
+* [The `ssh` Protocol](protocols.md#the-ssh-protocol)
+* [The `scp` Protocol](protocols.md#the-scp-protocol)
+* [The `nfs` Protocol](protocols.md#the-nfs-protocol)
 
 ## Generalities of a Service
 
@@ -19,13 +15,13 @@ The process refers to an opening of a Web Browser or any other visible program o
 
 These services are identified by a number of ports defined by the [Assigned Numbers RFC](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml).
 
-The configuration of services is in `/etc/services` and includes the name, the port that defines the service, and which transport protocol is used (UDP or TCP) for each one.
+The configuration of services is in `/etc/services` and includes the name, the port that defines the service, and which transport protocol is used \(UDP or TCP\) for each one.
 
 ## The `ssh` Protocol
 
 This protocol enables secure connection to the SSH server on a remote machine.
 
-- #### Installation of the package
+* **Installation of the package**
 
   By default, in **CentOS 7**, the SSH package comes installed, but if not, please run:
 
@@ -37,7 +33,7 @@ This protocol enables secure connection to the SSH server on a remote machine.
 
   If you need additional information about **yum commands**, you can visit this [link](https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s1-yum-useful-commands.htm).
 
-- #### The default configuration file
+* **The default configuration file**
 
   The default configuration file and settings for the SSHD daemon is in `/etc/ssh/sshd_config`.
 
@@ -75,7 +71,7 @@ This protocol enables secure connection to the SSH server on a remote machine.
   ssh shortcut_name
   ```
 
-- #### Restart the SSHD service
+* **Restart the SSHD service**
 
   Once you make the configuration changes, you can save and close the file. For the changes to take effect, you should restart the SSH daemon.
 
@@ -83,9 +79,9 @@ This protocol enables secure connection to the SSH server on a remote machine.
   systemctl restart sshd.service
   ```
 
-  _This command is used in case the SSHD service is `enabled`. To check the current status of the service, please read more about the [status of a service](services.md)._
+  _This command is used in case the SSHD service is_ `enabled`_. To check the current status of the service, please read more about the_ [_status of a service_](services.md)_._
 
-- #### Generate an SSH Key
+* **Generate an SSH Key**
 
   To secure the transmission of information, SSH employs different types of data manipulation techniques that include forms of asymmetrical encryption such as an SSH key.
 
@@ -93,7 +89,7 @@ This protocol enables secure connection to the SSH server on a remote machine.
   ssh-keygen
   ```
 
-  _Press `Enter` to accept the default location and filename which is `~/.ssh/id_rsa`. Then press `Enter`, then `Enter` again to not set a passphrase when prompted._
+  _Press_ `Enter` _to accept the default location and filename which is_ `~/.ssh/id_rsa`_. Then press_ `Enter`_, then_ `Enter` _again to not set a passphrase when prompted._
 
   Make sure the SSH key was successfully created by checking the encrypted content at `~/.ssh/id_rsa.pub`.
 
@@ -105,47 +101,46 @@ This protocol enables secure connection to the SSH server on a remote machine.
 
 This protocol allows files to be copied to, from, or between different hosts. It uses SSH for data transfer and provides the same authentication and same level of security as SSH.
 
-- #### Copy the file `remote_file.txt` from a remote host to the local host
+* **Copy the file `remote_file.txt` from a remote host to the local host**
 
 ```bash
 scp x0y@remotehost.ornl.gov:remote_file.txt /some/local/directory
 ```
 
-- #### Copy the file `local_file.txt` from the local host to a remote host directory
+* **Copy the file `local_file.txt` from the local host to a remote host directory**
 
   ```bash
   scp local_file.txt x0y@remotehost.ornl.gov:/some/remote/directory
   ```
 
-- #### Copy the directory `local_directory` from the local host to a remote host's directory `remote_directory`
+* **Copy the directory `local_directory` from the local host to a remote host's directory `remote_directory`**
 
   ```bash
   scp -r local_directory x0y@remotehost.ornl:/some/remote/directory/remote_directory
   ```
 
-- #### Copy the file `fr1.txt` from remote host `rh1.ornl.gov` to remote host `rh2.ornl.gov`
+* **Copy the file `fr1.txt` from remote host `rh1.ornl.gov` to remote host `rh2.ornl.gov`**
 
   ```bash
   scp x0y@rh1.ornl.gov:/some/remote/directory/fr1.txt x0y@rh2.ornl.gov:/some/remote/directory/
   ```
 
-- #### Copy multiple files from a local directory to a remote host home directory
+* **Copy multiple files from a local directory to a remote host home directory**
 
   ```bash
   scp one_file.txt another_file.txt x0y@remotehost.ornl.gov:
   ```
 
-
 ## The `nfs` Protocol
 
 To set up `NFS mounts`, we will need at least two Linux/Unix machines. Here we will be using two servers.
 
-- **NFS Server**: ornlserver.org with IP-192.168.0.100
-- **NFS Client**: ornlclient.org with IP-192.168.0.101
+* **NFS Server**: ornlserver.org with IP-192.168.0.100
+* **NFS Client**: ornlclient.org with IP-192.168.0.101
 
 ### NFS Server
 
-- #### **Configure export directory**
+* **Configure export directory**
 
   For sharing a directory with NFS, we need to make an entry in the `/etc/exports` configuration file. Let's create a new directory named `nfsshare` in the `/` partition of the server.
 
@@ -160,11 +155,11 @@ To set up `NFS mounts`, we will need at least two Linux/Unix machines. Here we w
   service autofs restart
   ```
 
-  _It displays a directory in the `/` partition named "nfsshare" which is being shared with client IP "192.168.0.101" with read and write privileges. You can also use the hostname of a server._
+  _It displays a directory in the_ `/` _partition named "nfsshare" which is being shared with client IP "192.168.0.101" with read and write privileges. You can also use the hostname of a server._
 
 ### NFS Client
 
-- #### Mount a shared directory on an NSF client
+* **Mount a shared directory on an NSF client**
 
   To mount a directory in our server to access it locally, we need to find out what shares are available on the remote server or NFS Server with `showmount`.
 
@@ -174,9 +169,9 @@ To set up `NFS mounts`, we will need at least two Linux/Unix machines. Here we w
   /nfsshare 192.168.0.101
   ```
 
-  _This command shows that a directory named `nfsshare` is available at "192.168.0.100" to share with your server._
+  _This command shows that a directory named_ `nfsshare` _is available at "192.168.0.100" to share with your server._
 
-- #### To mount a shared NFS directory permanently, we can use following `mount` command:
+* **To mount a shared NFS directory permanently, we can use following `mount` command:**
 
   ```bash
   vi /etc/fstab
@@ -185,4 +180,5 @@ To set up `NFS mounts`, we will need at least two Linux/Unix machines. Here we w
   service autofs restart
   ```
 
-  _With `vi /etc/fstab`, we are setting the `IP:name_directory` to be mounted, and it will be mounted on `/mnt`. You can verify it with `mount | grep nfs`._
+  _With_ `vi /etc/fstab`_, we are setting the_ `IP:name_directory` _to be mounted, and it will be mounted on_ `/mnt`_. You can verify it with_ `mount | grep nfs`_._
+

@@ -2,15 +2,15 @@
 
 _Before checking the status of the SSH service, make sure you have the SSHD service enabled._
 
-- #### Turning ON the SSHD service at boot time
+* **Turning ON the SSHD service at boot time**
 
   ```bash
   systemctl enable sshd.service
   ```
 
-  _To turn it off at boot time, please enter `systemctl disable sshd.service`._
+  _To turn it off at boot time, please enter_ `systemctl disable sshd.service`_._
 
-- #### Check if a service is enabled or disabled
+* **Check if a service is enabled or disabled**
 
   ```bash
   systemctl status sshd.service
@@ -18,7 +18,7 @@ _Before checking the status of the SSH service, make sure you have the SSHD serv
 
   _It will display a message of **active** or **inactive** service._
 
-- #### Reload SSHD configuration changes
+* **Reload SSHD configuration changes**
 
   ```bash
   systemctl start sshd.service
@@ -27,4 +27,5 @@ _Before checking the status of the SSH service, make sure you have the SSHD serv
   systemctl reload sshd.service
   ```
 
-  _The `start` option will initiate the SSHD service, `stop` will stop it, and finally, `restart` or `reload` will refresh the new configurations_.
+  _The_ `start` _option will initiate the SSHD service,_ `stop` _will stop it, and finally,_ `restart` _or_ `reload` _will refresh the new configurations_.
+
