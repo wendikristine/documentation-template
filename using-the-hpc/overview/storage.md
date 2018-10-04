@@ -5,9 +5,9 @@ The ADC Cluster provides an array of data storage platforms, each designed with 
 | Storage Area | Path | Purpose |
 | :--- | :--- | :--- |
 | User Home | /home/$USER | Long-term data for routine access |
-| User Scratch | /lustre/or-hydra/cades-birthright/$USER | Short-term project data for fast, batch-job access that is not shared |
-| Project Share | /lustre/or-hydra/cades-birthright/proj-shared/$USER | Short-term project data for fast, batch-job access that's shared with other project members |
-| World Share | /lustre/or-hydra/cades-birthright/world-shared/$USER | Short-term project data for fast, batch-job access that is shared globally |
+| User Scratch | /lustre/or-myst/cad-right/$USER | Short-term project data for fast, batch-job access that is not shared |
+| Project Share | /lustre/or-myst/cad-right/proj-shared/$USER | Short-term project data for fast, batch-job access that's shared with other project members |
+| World Share | /lustre/or-myst/cad-right/world-shared/$USER | Short-term project data for fast, batch-job access that is shared globally |
 | Local Scratch | $localscratch | Fast read/write access during a batch job |
 | User Temp | /data/adc/stratus/ | Long term storage of data not currently in use \(Currently, only accessible using command adc\_xfer\) |
 | User Archive | HPSS \(if applicable\) | Placeholder |
@@ -49,8 +49,8 @@ The following table details quota, backup, purge, and retention information for 
 | Area | Path | Type | Permissions | Quota | Backups | Purged | Retention |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | User Home | /home/$USER | NFS | User-controlled | 10 GB | No | No | NA |
-| User Scratch | /lustre/or-hydra/cades-birthright/$USER | Lustre | 700 | TBD | No | No | TBD Days |
-| Project Share | /lustre/or-hydra/cades-birthright/proj-share | Lustre | 770 | TBD | No | No | TBD Days |
-| World Share | /lustre/or-hydra/cades-arm/world-share | Lustre | 775 | TBD | No | No | TBD Days |
-| Local Scratch | /lustre/or-hydra/cades-birthright/scratch | Lustre | 770 | TBD | No | No | TBD Days |
+| User Scratch | /lustre/or-myst/cad-right/$USER | Lustre | 700 | TBD | No | No | TBD Days |
+| Project Share | /lustre/or-myst/cad-right/proj-share | Lustre | 770 | TBD | No | No | TBD Days |
+| World Share | /lustre/or-myst/cad-arm/world-share | Lustre | 775 | TBD | No | No | TBD Days |
+| Local Scratch | /lustre/or-myst/cad-right/scratch | Lustre | 770 | TBD | No | No | TBD Days |
 

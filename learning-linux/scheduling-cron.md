@@ -47,7 +47,7 @@ The main configuration file for cron is `/etc/crontab`. If you view the content 
   23 5 * * *  root  zip f1.zip f1
 
   #Every week on Sunday at 03:19 a copy will be made
-  19 3 * * 0  root  scp metis.ornl.gov:/tmp/files .
+  19 3 * * 0  root  scp metis.univ.edu:/tmp/files .
 
   #Every month on day 6 at 00:23 minutes, a script will be run
   23 0 6 * *  root  ./script

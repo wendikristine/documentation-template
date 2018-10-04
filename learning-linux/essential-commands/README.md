@@ -117,11 +117,11 @@
 * **echo: Display a line of text or a string on standard output or into a file**
 
   ```bash
-  echo "Hi ORNL"
-  Hi ORNL
+  echo "Hi Univ"
+  Hi Univ
   ```
 
-  _In this example, the string_ `Hi ORNL` _is shown because we send that message to the terminal._
+  _In this example, the string_ `Hi Univ` _is shown because we send that message to the terminal._
 
   To view the value assigned to a variable, add `$` before the variable name:
 

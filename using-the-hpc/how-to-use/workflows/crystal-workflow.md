@@ -2,7 +2,7 @@
 
 CrystalFlow is a hypothetical workflow with low-medium complexity that adequately illustrates the benefits and characteristics of scientific computational workflows.
 
-> 📝 **Note:** The code, executables, and test data for the crystal workflow is available on ORNL's public [GitLab](https://code.ornl.gov/km0/cades_workflows).
+> 📝 **Note:** The code, executables, and test data for the crystal workflow is available on Univ's public [GitLab](https://code.univ.edu/km0/cad_workflows).
 
 ## About the Crystal Workflow
 

@@ -22,17 +22,17 @@ CCLA is providing initial access to cvmfs software repositories for evaluation i
 
 Repositories for the Open Science Grid, and a \(currently empty\) internal CCLA repo are available on SPHC nodes.
 
-CVMFS software repos may also be accessed by VMs running in CCLA OpenStack and ORNL desktop Linux systems. Instructions will be provided for these use cases, though CCLA support efforts will be focused on CVMFS within the HPC environment.
+CVMFS software repos may also be accessed by VMs running in CCLA OpenStack and Univ desktop Linux systems. Instructions will be provided for these use cases, though CCLA support efforts will be focused on CVMFS within the HPC environment.
 
 ### CVMS on HPC Condos
 
-The HPC cluster login and compute nodes have cvmfs configured for the Open Science Grid repo and a new \(as yet empty\) cades.ornl.gov repo.
+The HPC cluster login and compute nodes have cvmfs configured for the Open Science Grid repo and a new \(as yet empty\) cad.univ.edu repo.
 
 Other software repos \(CERN, SLAC, FNAL, etc.\) may be officially added in the future.
 
 #### CVMFS Repos Available
 
-The cades repos is hosted by ORNL which over time will be populated with the CCLA software tree.
+The cad repos is hosted by Univ which over time will be populated with the CCLA software tree.
 
 The OSG repo contains software distributed and maintained by the Open Science Grid.
 
@@ -43,14 +43,14 @@ On or-condo-login01:
 ```text
 -bash-4.2$ cvmfs_config probe
 Probing /cvmfs/oasis.opensciencegrid.org... OK
-Probing /cvmfs/rdlinux.ornl.gov... OK
-Probing /cvmfs/cades.ornl.gov... OK
+Probing /cvmfs/rdlinux.univ.edu... OK
+Probing /cvmfs/cad.univ.edu... OK
 
 -bash-4.2$ ls /cvmfs/oasis.opensciencegrid.org/osg/
 bin  modules  modules2  palms  projects  README.txt  sw  test_spack  update.details
 
--bash-4.2$ ls /cvmfs/cades.ornl.gov/
-cades-ops  pgi
+-bash-4.2$ ls /cvmfs/cad.univ.edu/
+cad-ops  pgi
 ```
 
 ### OSG CVMFS Provided Modules and Tutorials

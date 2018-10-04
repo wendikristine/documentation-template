@@ -20,9 +20,9 @@ The tutorial assumes you have already worked through the [Execute a Job Tutorial
 If you need to request an allocation, see [instructions here](../request-access.md).
 
 1. Open a Bash terminal \(or PuTTY for Windows users\).
-2. Execute `ssh username@or-condo-login.ornl.gov`.
-   * Replace "username" with your XCAMS or UCAMS ID.
-3. When prompted, enter your XCAMS or UCAMS password.
+2. Execute `ssh username@or-condo-login.univ.edu`.
+   * Replace "username" with your  or  ID.
+3. When prompted, enter your  or  password.
 
 ## Step 2: Create a PBS Script
 
@@ -34,11 +34,11 @@ Here is an example PBS script for running a batch job on a HPC Condo allocation.
 #!/bin/bash
 
 #PBS -N mpi_hello_world_f
-#PBS -M your_email@ornl.gov
+#PBS -M your_email@univ.edu
 #PBS -l nodes=1:ppn=16
 #PBS -l walltime=0:00:6:0
-#PBS -W group_list=cades-birthright
-#PBS -A birthright
+#PBS -W group_list=cad-right
+#PBS -A right
 #PBS -l qos=burst
 #PBS -V
 
@@ -55,10 +55,10 @@ mpirun hello_world_f
 1. From the login node, change your working directory to the desired file system. We are going to use our Lustre allocation for this example. _If Lustre storage is not available, you may complete this tutorial from within your home directory on NFS._
 
    ```bash
-   cd /lustre/or-hydra/cades-birthright/username
+   cd /lustre/or-myst/cad-right/username
    ```
 
-   Replace "username" with your UCAMS/XCAMS user ID.
+   Replace "username" with your / user ID.
 
 2. Use Vi to create and edit your PBS script.
 
@@ -93,7 +93,7 @@ end
 
 ### Fortran Procedure
 
-1. Ensure that you are still in your working directory \(`/lustre/or-hydra/cades-birthright/username`\) using `pwd`.
+1. Ensure that you are still in your working directory \(`/lustre/or-myst/cad-right/username`\) using `pwd`.
 2. Use Vi \(`vi`\) to create your Fortran source file within your working directory.
 
    ```bash

@@ -174,5 +174,5 @@ Hello world
 ### Where to go from here?
 
 * Use the [Crystal Workflow](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/using-the-hpc/how-to-use/condo-crystal-workflow.md) with these workflow tools.
-* Come talk to us at CADES if you think one or more of your applications will benefit with the help of the aforementioned workflow tools.
+* Come talk to us at cad if you think one or more of your applications will benefit with the help of the aforementioned workflow tools.
 

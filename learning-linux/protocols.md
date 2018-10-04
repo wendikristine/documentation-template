@@ -104,39 +104,39 @@ This protocol allows files to be copied to, from, or between different hosts. It
 * **Copy the file `remote_file.txt` from a remote host to the local host**
 
 ```bash
-scp x0y@remotehost.ornl.gov:remote_file.txt /some/local/directory
+scp x0y@remotehost.univ.edu:remote_file.txt /some/local/directory
 ```
 
 * **Copy the file `local_file.txt` from the local host to a remote host directory**
 
   ```bash
-  scp local_file.txt x0y@remotehost.ornl.gov:/some/remote/directory
+  scp local_file.txt x0y@remotehost.univ.edu:/some/remote/directory
   ```
 
 * **Copy the directory `local_directory` from the local host to a remote host's directory `remote_directory`**
 
   ```bash
-  scp -r local_directory x0y@remotehost.ornl:/some/remote/directory/remote_directory
+  scp -r local_directory x0y@remotehost.Univ:/some/remote/directory/remote_directory
   ```
 
-* **Copy the file `fr1.txt` from remote host `rh1.ornl.gov` to remote host `rh2.ornl.gov`**
+* **Copy the file `fr1.txt` from remote host `rh1.univ.edu` to remote host `rh2.univ.edu`**
 
   ```bash
-  scp x0y@rh1.ornl.gov:/some/remote/directory/fr1.txt x0y@rh2.ornl.gov:/some/remote/directory/
+  scp x0y@rh1.univ.edu:/some/remote/directory/fr1.txt x0y@rh2.univ.edu:/some/remote/directory/
   ```
 
 * **Copy multiple files from a local directory to a remote host home directory**
 
   ```bash
-  scp one_file.txt another_file.txt x0y@remotehost.ornl.gov:
+  scp one_file.txt another_file.txt x0y@remotehost.univ.edu:
   ```
 
 ## The `nfs` Protocol
 
 To set up `NFS mounts`, we will need at least two Linux/Unix machines. Here we will be using two servers.
 
-* **NFS Server**: ornlserver.org with IP-192.168.0.100
-* **NFS Client**: ornlclient.org with IP-192.168.0.101
+* **NFS Server**: Univserver.org with IP-192.168.0.100
+* **NFS Client**: Univclient.org with IP-192.168.0.101
 
 ### NFS Server
 

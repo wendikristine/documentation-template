@@ -35,11 +35,11 @@ Here is an example PBS script for running a batch job on a HPC Condo allocation.
 #!/bin/bash
 
 #PBS -N mpi_hello_world_make
-#PBS -M your_email@ornl.gov
+#PBS -M your_email@univ.edu
 #PBS -l nodes=1:ppn=16
 #PBS -l walltime=0:00:6:0
 #PBS -W group_list=right
-#PBS -A birthright
+#PBS -A right
 #PBS -l qos=burst
 #PBS -V
 
@@ -89,7 +89,7 @@ echo "============================="
    cd /lustre/myst/right/username
    ```
 
-   Replace "username" with your UCAMS/XCAMS user ID.
+   Replace "username" with your / user ID.
 
 2. Use Vi to create and edit your PBS script.
 
@@ -147,7 +147,7 @@ clean:
 3. Paste the hello world Makefile code into Vi.
 4. Save your file and return to the Bash shell.
 
-_If you have been following along the CADES tutorials in order, you will already have compiled programs for C, C++, and Fortran. However, if you did not already have compiled codes, the Makefile we have created here would compile all of them when we run our PBS script. In the_ `hello_world_make.pbs` _file, there is a line that says_ `make all`_. This command will run the contents of our Makefile, which will compile the C, C++, and Fortran programs prior to running the job._
+_If you have been following along the cad tutorials in order, you will already have compiled programs for C, C++, and Fortran. However, if you did not already have compiled codes, the Makefile we have created here would compile all of them when we run our PBS script. In the_ `hello_world_make.pbs` _file, there is a line that says_ `make all`_. This command will run the contents of our Makefile, which will compile the C, C++, and Fortran programs prior to running the job._
 
 ## Step 4: Run the Job
 

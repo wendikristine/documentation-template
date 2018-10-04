@@ -35,8 +35,8 @@ _**CCLA OR Condo HPC, NFS, and Lustre**_
 * To set up a new connection, click on the `Open Connection` button in the top left of the window.
 * In the dropdown menu of the resulting window, select `SFTP (SSH File Transfer Protocol)`.
 * Server: `tigris.doane.edu`
-* Username: your UCAMS ID \(UID\)
-* Password: your UCAMS password
+* Username: your  ID \(UID\)
+* Password: your  password
 * Select your SSH key from the dropdown menu. Be sure to choose the SSH key that allows you to access the CCLA OR HPC Condo login node.
 * Click `Connect`.
 
@@ -80,8 +80,8 @@ _**CCLA HPC, NFS, and Lustre**_
 * To set up a new connection, click on `New Site` in the top left of the window.
 * In the `File protocol` dropdown menu  on the right, select `SFTP`.
 * Host name: the IP address of your virtual machine
-* Username: your UCAMS ID \(UID\)
-* Password: your UCAMS password
+* Username: your  ID \(UID\)
+* Password: your  password
 * Click `Login`.
 
   > NFS user home directory path: `~/home/UID/`  

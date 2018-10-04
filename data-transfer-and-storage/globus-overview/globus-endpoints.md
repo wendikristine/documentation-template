@@ -6,7 +6,7 @@ Globus Endpoints are storage systems to which you have access. Once an Endpoint 
 | :--- | :--- | :--- | :--- |
 | CCLA HPC | NFS | /~/ | CCLA open research, user home directory |
 | CCLA HPC | NFS | /data/ | CCLA open research, NFS project directories |
-| CCLA HPC | Lustre | /lustre/or-hydra/ | CCLA open research, project directories. High-performance, temporary storage. |
+| CCLA HPC | Lustre | /lustre/or-myst/ | CCLA open research, project directories. High-performance, temporary storage. |
 | OLCF ATLAS | OLCF DTN | /path/to/project/file/data | OLCF-managed NFS and Lustre storage system. |
 
 📝 **Note:** If you're having trouble finding an existing Endpoint, [email the CCLA team](mailto:ccla@doane.edu).
@@ -36,7 +36,7 @@ It is easy to use your personal or work computer as a Globus Endpoint. Follow th
 
 1. Choose a descriptive name for your endpoint and click `Generate Setup Key`.
 2. Copy the Setup Key. You will paste this into the software during setup.
-3. Navigate to the [Globus Personal Connect webpage](https://www.globus.org/globus-connect-personal) to download the client onto your personal \(or ORNL-owned\) computer.
+3. Navigate to the [Globus Personal Connect webpage](https://www.globus.org/globus-connect-personal) to download the client onto your personal \(or Univ-owned\) computer.
 4. Click on the name of your operating system to obtain detailed instructions for installing the client and setting up the Endpoint.   
 
     [![](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/data-transfer-and-storage/screenshots/globus-choose-operating-sys.png)](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/data-transfer-and-storage/screenshots/globus-choose-operating-sys.png)   

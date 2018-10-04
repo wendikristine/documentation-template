@@ -22,12 +22,12 @@ Additional examples can be found in [C++](cpp.md), [Fortran](fortran.md) or [Pyt
 
 Open and Moderate protection zones each have their own login node. Choose the login node for your protection zone. For this tutorial, we will be using the Open protection zone. If you need to request an allocation, see [instructions here](../request-access.md).
 
-📝 **Note:** The Open protection zone can be accessed either using either XCAMS or UCAMS credentials. However, the Moderate protection zone requires an ORNL UCAMS ID.
+📝 **Note:** The Open protection zone can be accessed either using either  or  credentials. However, the Moderate protection zone requires an Univ  ID.
 
 1. Open a Bash terminal \(or PuTTY for Windows users\).
-2. Execute `ssh username@or-condo-login.ornl.gov`.
-   * Replace "username" with your XCAMS or UCAMS ID.
-3. When prompted, enter your XCAMS or UCAMS password.
+2. Execute `ssh username@or-condo-login.univ.edu`.
+   * Replace "username" with your  or  ID.
+3. When prompted, enter your  or  password.
 
 Once you have connected to the login node, you can proceed to Step 2 and begin assembling your PBS script.
 
@@ -45,11 +45,11 @@ Here is an example PBS script for running a batch job on a HPC Condo allocation.
 #!/bin/bash
 
 #PBS -N mpi_hello_world_c
-#PBS -M your_email@ornl.gov
+#PBS -M your_email@univ.edu
 #PBS -l nodes=1:ppn=16
 #PBS -l walltime=0:00:6:0
-#PBS -W group_list=cades-birthright
-#PBS -A birthright
+#PBS -W group_list=cad-right
+#PBS -A right
 #PBS -l qos=burst
 #PBS -V
 
@@ -61,7 +61,7 @@ pwd
 mpirun hello_world_c
 ```
 
-📝 **Note**: This example uses the `cades-birthright` resource. Users can use the `cades-birthright` resource for these examples, but otherwise, the PBS directives for your Division should be used. See the table [on this page](../request-access.md#HPC-condo-groups) for the appropriate resource codes.
+📝 **Note**: This example uses the `cad-right` resource. Users can use the `cad-right` resource for these examples, but otherwise, the PBS directives for your Division should be used. See the table [on this page](../request-access.md#HPC-condo-groups) for the appropriate resource codes.
 
 ### PBS Script Breakdown
 
@@ -69,11 +69,11 @@ Here, we break down the essential elements of the above PBS script.
 
 * `#!/bin/bash`: sets the script type
 * `#PBS -N mpi_hello_world_c`: sets the job name; your output files will share this name
-* `#PBS -M your_email@ornl.gov`: add your email address if you would like errors to be emailed to you
+* `#PBS -M your_email@univ.edu`: add your email address if you would like errors to be emailed to you
 * `#PBS -l nodes=1:ppn=16`: sets the number of nodes and processors per node that you want to use to run your job; in this case, we're using one node and 16 cores per node.
 * `#PBS -l walltime=0:00:6:0`: tells PBS the anticipated runtime for your job, where `walltime=HH:MM:S`
-* `#PBS -W group_list=cades-birthright`: specifies your LDAP group; the full list of HPC Condo LDAP groups is [here](../request-access.md#HPC-condo-groups)
-* `#PBS -A birthright`: specifies your account type; list of account types is found [here](../request-access.md#HPC-condo-groups)
+* `#PBS -W group_list=cad-right`: specifies your LDAP group; the full list of HPC Condo LDAP groups is [here](../request-access.md#HPC-condo-groups)
+* `#PBS -A right`: specifies your account type; list of account types is found [here](../request-access.md#HPC-condo-groups)
 * `#PBS -l qos=burst`: sets the quality of service \(QOS\) to burst or std
   * Burst jobs allow a user to leverage more nodes/cores/GPUs than may be in their formal allocation. However, in exchange for this "resource burst" flexibility, your burst job may be preempted if the rightful owner of those resources needs them to complete his or her own jobs.
   * In most cases, a user will simply run a job with the QOS set to std.
@@ -94,10 +94,10 @@ When creating and editing your PBS script, we will be working on the login node 
 1. From the login node, change your working directory to the desired file system. We are going to use our Lustre allocation for this example.
 
    ```bash
-   cd /lustre/or-hydra/cades-birthright/username
+   cd /lustre/or-myst/cad-right/username
    ```
 
-   Replace "username" with your own UCAMS/XCAMS user ID.
+   Replace "username" with your own / user ID.
 
 2. Use Vi to create and edit your PBS script.
 
@@ -152,7 +152,7 @@ int main(int argc, char** argv) {
 
 When creating and editing your `hello_world.c` source code, we will be working on the login node \(from Lustre storage\) using the text editor, Vi. _If Lustre storage is not available, you may complete this tutorial from within your home directory on NFS._
 
-1. Ensure that you are still in your working directory \(`/lustre/or-hydra/cades-birthright/username`\) using `pwd`.
+1. Ensure that you are still in your working directory \(`/lustre/or-myst/cad-right/username`\) using `pwd`.
 2. Use Vi \(`vi`\) to create your C source file within your working directory.
 
    ```bash
@@ -228,22 +228,22 @@ With the C code compiled into a binary \(`hello_world_c`\), we can now schedule 
    Your output should look something like this, with one line per processor core \(16 in this case\):
 
    ```bash
-    Hello world from processor or-condo-c136.ornl.gov, rank 3 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 4 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 6 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 11 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 7 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 14 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 2 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 5 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 8 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 9 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 10 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 12 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 13 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 15 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 0 out of 16 processors
-    Hello world from processor or-condo-c136.ornl.gov, rank 1 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 3 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 4 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 6 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 11 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 7 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 14 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 2 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 5 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 8 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 9 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 10 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 12 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 13 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 15 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 0 out of 16 processors
+    Hello world from processor or-condo-c136.univ.edu, rank 1 out of 16 processors
    ```
 
 4. Download your results \(using the `scp` command or an SFTP client\) or move them to persistent storage. See our [moving data](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/data-transfer-storage/moving-data.md) section for help.

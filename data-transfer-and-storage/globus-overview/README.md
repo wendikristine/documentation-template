@@ -7,7 +7,7 @@ Globus is a powerful data transfer tool that has a wide range of support for pop
 Globus is primarily used via its web interface, though it is possible to download a personal client or use command line tools. 1. Navigate to the Globus website \([https://www.globus.org/](https://www.globus.org/)\) and click `Log in`.
 
 * Select your organization Oak Ridge National Laboratories from the drop-down menu and select `Continue`.
-* Use your UCAMS username and password to log in.
+* Use your  username and password to log in.
   * If you have an existing Globus account, you may choose to link them at this time, or skip to the next step, by clicking `No thanks, continue`.
 * Accept the user agreement and `Continue`. The next screen with ask you to `Allow` permissions.
 

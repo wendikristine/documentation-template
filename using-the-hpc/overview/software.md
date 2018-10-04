@@ -34,14 +34,14 @@ Visit is a well-known visualization software package that is available on HPC. V
 
 1. Start Visit and go to `Options` → `Host profiles`
 2. Press `New Host` and populate the fields as described below
-   * Host nickname: `cades`
-   * Remote host name: `or-condo-login.ornl.gov`
+   * Host nickname: `cad`
+   * Remote host name: `or-condo-login.univ.edu`
    * Host name aliases: `or-condo-login#g`
    * Path to Visit installation: `/software/dev_tools/swtree/cs400_centos7.2_pe2016-08/visit/2.10.3/centos7.2_gnu5.3.0`
-   * Username: `<your_ucams_id>`
+   * Username: `<your__id>`
 3. Check the `Tunnel data ...` checkbox
 4. Click on `Apply`
-5. Now in the `file` → `open` menu, click on the dropdown \(▾\) and select `cades`
+5. Now in the `file` → `open` menu, click on the dropdown \(▾\) and select `cad`
 6. Enter your password in the dialog box that opens
 7. You should be able to see your data on the HPC file system which can be opened just as if it were local data
 
