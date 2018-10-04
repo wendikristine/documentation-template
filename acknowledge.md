@@ -6,7 +6,6 @@ Sample acknowledgement:
 
 > This research used resources of the University of Oz, which is supported by Glenda the Good Witch under Contract No. DE-XXXX-XXXXXX"
 
-
 You may use any variation on this theme, calling out specific simulations or portions of the research that used our resources, or citing specific resources used.
 
 However, the crucial elements to include are:
