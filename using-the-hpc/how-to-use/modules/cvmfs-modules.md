@@ -16,17 +16,13 @@ CVMFS integrates very will with container management systems, allowing the same 
 
 Software accessed via CVMFS is cached locally, thus providing runtime performance comparable to locally installed versions.
 
-## CVMFS within CCLA
+## CVMFS within HPC
 
 CCLA is providing initial access to cvmfs software repositories for evaluation in our HPC environments.
 
 Repositories for the Open Science Grid, and a \(currently empty\) internal CCLA repo are available on SPHC nodes.
 
 CVMFS software repos may also be accessed by VMs running in CCLA OpenStack and ORNL desktop Linux systems. Instructions will be provided for these use cases, though CCLA support efforts will be focused on CVMFS within the HPC environment.
-
-### CVMFS Support
-
-For assistance with cvmfs, please either email ccla@doane.edu or use the \#cvmfs channel at [https://cades.slack.com](https://cades.slack.com)
 
 ### CVMS on HPC Condos
 
@@ -65,7 +61,7 @@ This software repository is built and maintained by the OSG, and not CCLA. It is
 
 Additional info: [https://support.opensciencegrid.org/support/solutions/articles/12000006683-switching-between-oasis-and-local-modules](https://support.opensciencegrid.org/support/solutions/articles/12000006683-switching-between-oasis-and-local-modules)
 
-On or-condo-login01
+On hpc-login01
 
 ```text
 -bash-4.2$ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/current/init/bash
