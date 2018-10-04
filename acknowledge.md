@@ -4,7 +4,7 @@ Please acknowledge in your publications the role that the computing facilities p
 
 Sample acknowledgement:
 
-> This research used resources of the University of Oz, which is supported by Glenda the Good Witch under Contract No. DE-XXXX-XXXXXX"
+> This research used resources of the University of Oz, which is supported by Glenda the Good Witch under Contract No. DE-XXXX-XXXXX"
 
 You may use any variation on this theme, calling out specific simulations or portions of the research that used our resources, or citing specific resources used.
 
