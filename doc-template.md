@@ -16,7 +16,7 @@ keywords: written communication, cyberinfrastructure, computational research fac
 **Background:**
 [GitBook](http://gitbook.com) provides an easy-to-use platform to develop professional documentation. GitBook is closely integrated with [GitHub](http://www.github.com) which allows version control of documentation. Lastly, all documents are written in [Markdown](https://en.wikipedia.org/wiki/Markdown), a simple mark-up language that can be learned in a few minutes of practice.
 
-What will this look like after you get it set up? Here is the published documentation: http://template.cirruspublications.com/
+> What will this look like after you get it set up? Here is the published documentation: <http://template.cirruspublications.com/>
 
 **Intended Audience:**
 The contents of the template repository is designed for individuals and organizations in the _research computing field_. However, with modification, the template could be used my nearly anyone.
