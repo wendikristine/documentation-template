@@ -1,4 +1,4 @@
-# Git Basics
+# Git Basics (using GitLHub)
 
 **Git**, like other version control \(VC\) software/system \([see a Wikipedia list](https://en.wikipedia.org/wiki/List_of_version_control_software)\), tracks changes to a file system over time. It is typically used in software development but can be used to monitor changes in any file.
 
@@ -12,20 +12,23 @@ When we talk about Git, we say that a **repository** stores files. This term mea
 
 > **Repository** - the Git data structure which contains files and folders, as well as how the files/folders have changed over time
 
-## Accessing GitLab
+## Accessing GitHub
 
-* In your browser, navigate to [https://gitlab.com/](https://gitlab.com/) and login using your credentials. Click on the green button at the top of the window that says `New project`.
-* Choose the `Blank project` tab, create a name for the project, and select the "Visibility Level" that you prefer. Then click `Create project`.
-* Notice that GitLab has provided instructions to perform Git setup and initialization of your repository. We will follow those instructions.
-* _\(Optional\)_ Prior to cloning the repository, consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:
-  * Click on your user image in the top-right of the GitLab window.
-  * Select `Settings`.
-  * On the left, click `SSH keys`.
-  * Paste your _**public**_ SSH key in the box, provide a title, and save by clicking `Add key`.
+- In your browser, navigate to <https://github.com/> and `Sign in` using your credentials. If you need to create an account, click `Sign up`.
+- To create a new repository, find and click on the green button at the top of the window that says `New`.
+- Type a name for your new repository. Then select `Public` or `Private`. All other options are optional and will not have any effect on this tutorial.
+
+- Notice that GitHub has provided instructions to perform Git setup and initialization of your repository. We will follow those instructions in the next section.
+- _(Optional)_ Before continuing, consider adding your SSH key to your GitHub profile so you are not prompted for credentials after every commit. To add your public SSH key to GitHub:
+  - Click on your user image in the top-right of the GitHub window.
+  - Select `Settings`.
+  - On the left, click `SSH and GPG keys`, then `New SSH key`.
+  - Paste your _**public**_ SSH key in the box, provide a title, and save by clicking `Add SSH key`.
+
 
 ## Local Machine Setup
 
-* First, use the command line to see if Git is installed. \(Windows users may check their list of currently installed programs.\)
+* First, use the command line to see if Git is installed. (Windows users may check their list of currently installed programs.)
 
   ```bash
   git --version
@@ -56,7 +59,7 @@ When we talk about Git, we say that a **repository** stores files. This term mea
 
     * Windows: download [Git for Windows](https://gitforwindows.org/) and install it. Also, this tutorial utilizes a Bash command line interface, therefore, you should use _Git Bash_, which is a part of the Git installation package for Windows.
 
-* Setup Git with your access credentials to GitLab with the following commands:
+* Setup Git with your access credentials to GitHub with the following commands:
 
   ```bash
   git config --global user.name "your_username"
@@ -71,26 +74,35 @@ When we talk about Git, we say that a **repository** stores files. This term mea
   cd /home/user/projects/
   ```
 
-* **Clone** the repository. A new folder is created, and Git starts tracking. Consult the repository information from the GitLab new repository window.
+#### Option 1: Configure a NEW repository
+
+* Follow the instructions provided by GitHub:
+
+  ```
+  echo "# testing" >> README.md
+  git init
+  ```
+  _These commands will create a file called README.md and add a line to it that says "# testing". Then, `git init` tells Git to initialize this repository and start tracking changes._
+
+#### Option 2: Clone an existing repository
+
+* **Clone** the repository. A new folder is created, and Git starts tracking.
 
   > **Clone** - is the equivalent of making a local copy on your computer
 
   ```bash
-  git clone git@gitlab.com:username/example-project.git
+  git clone git@github.com:username/example-project.git
   cd example-project/
   ```
+  _In the above command, change "username" to your username and "example-project" to the name of your repository._
 
-* GitLab also recommends the creation of a `README.md` file to describe the repository. \(We will edit the contents of the README.md file later.\)
+#### Adding, Committing, and Pushing changes
 
-  ```bash
-  touch README.md
-  ```
-
-* The next three steps consist of `adding`, `committing`, and `pushing` from your local machine to GitLab.
+* The next three steps consist of `adding`, `committing`, and `pushing` from your local machine to GitHub.
 
   > **Add** - includes the added files in the content that you want to save  
   >  **Commit** - creates a "snapshot" of the repository at that moment and uses the changes from the "added" files  
-  >  **Push** - moves/uploads the local changes \(or snapshot\) to the remote GitLab repository
+  >  **Push** - moves/uploads the local changes (or snapshot) to the remote GitHub repository
 
   ```bash
   git add README.md
@@ -115,15 +127,15 @@ When we talk about Git, we say that a **repository** stores files. This term mea
 
 > **Checkout** - Git command to change branches
 
-* Now we edit the `README.md` file to add a description of the repository. The file needs to be opened with a text editor \(nano, vim, emacs, etc.\).
+* Now we edit the `README.md` file to add a description of the repository. The file needs to be opened with a text editor (nano, vim, emacs, etc.).
 
   ```bash
   vi README.md
   ```
 
-* Add your description. `README.md` is a markdown file. If you do not know how to use markdown, don't worry. Basic text works, too. However, if you would like to learn markdown, it is simple. [Use this GitLab tutorial](https://docs.gitlab.com/ee/user/markdown.html#standard-markdown).
+* Add your description. `README.md` is a markdown file. If you do not know how to use markdown, don't worry. Basic text works, too. However, if you would like to learn markdown, it is simple. [Use this GitHub guide](https://guides.github.com/features/mastering-markdown/).
   * To type in `vi`, press `i` for _insert_. Now you can add content.
-  * To save your changes and exit `vi`, press `<esc>` to leave editing, then type `:wq` which writes \(saves\) and quits.
+  * To save your changes and exit `vi`, press `<esc>` to leave editing, then type `:wq` which writes (saves) and quits.
 * As before, we need to add, commit, and push the changes to the GitLab repository.
 
   ```bash
@@ -132,25 +144,21 @@ When we talk about Git, we say that a **repository** stores files. This term mea
   git push --set-upstream origin add-readme
   ```
 
-  * In future pushes, you can simplify the last command by typing only `git push`. However, the first time you push to a new branch, you have to tell GitLab that you have created a new branch on your computer and the changes that you are pushing should be pushed to a new _remote_ branch called `add-readme`.
+  * In future pushes, you can simplify the last command by typing only `git push`. However, the first time you push to a new branch, you have to tell GitHub that you have created a new branch on your computer and the changes that you are pushing should be pushed to a new _remote_ branch called `add-readme`.
 
 ## Merging Content from a Development Branch to the Master Branch
 
 After completing the previous section, we have two branches: `add-readme` and `master`. We are ready to move the `add-readme` content to the `master` branch.
 
-You can create a merge request using the GitLab GUI.
+You can create a merge request using the GitHub GUI (website).
 
-* From the left menu panel in Gitlab, select `Merge Request` then the green `New merge request` button.
-* Select your branch in the "Source Branch" side \(`add-readme`\).
-  * Target branch is _master_.
-  * Click `Compare branches and continue`.
-* You can add as much information to the next screen as you like, but the only thing needed is:
-  * Assign to: _&lt; Project Owner, etc. &gt;_
-    * In our case, we are the project owner, so we may assign the merge request to ourselves.
-  * Click `Submit merge request`.
-* On the next page, click the green `Merge` button.
+- When viewing the repository on the GitHub website, click the button `New pull request`.
+- Select the "base" branch. This will be `master`. Then select the "compare" branch: `add-readme`.
 
-From the left menu panel in Gitlab, select `Overview` to see the new `README.md` content.
+  > Notice the arrow between the two selection boxes. The `master` branch will "pull" the new content from the `add-readme` branch.
+
+- Now click `Create pull request`. In our case, we own this repository so we can approve the Pull request and merge the content. If we did not own the repository, a request would be sent to the owner.
+
 
 ### External Reference Material
 
@@ -164,8 +172,7 @@ Sometimes Git repository sites use different terminology, i.e., _merge request_ 
 
 ### Ready to Learn More?
 
-* [Contribute with Git and Atom](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-workflow.md)
-* [Git in the Command Line](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-command-line.md)
-* [Git in the Command Line x 2](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-command-line2.md)
-* [Git Scenarios](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-scenarios.md)
-
+- [Git and Atom Workflow: GitHub](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-workflow-github.md)
+- [Git and Atom Workflow: GitLab](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-workflow-gitlab.md)
+- [Git in the Command Line](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-command-line.md)
+- [Git Scenarios](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/contributing/git-scenarios.md)

@@ -1,22 +1,22 @@
-# Git and Atom
+# Git and Atom Workflow (using GitHub)
 
-### GitLab
+### GitHub
 
-GitLab is a popular platform to share code, store software solutions, and host documentation.
+GitHub is a popular platform to share code, store software solutions, and host documentation.
 
-Project owners control access to GitLab repositories. You may log in and create your projects and repositories, and share them with others.
+Project owners control access to GitHub repositories. You may log in and create your projects and repositories, and share them with others.
 
 [![](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-workflow-steps.png)](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-workflow-steps.png)
 
 _Jump to a Section:_
 
-* [Setup](git-workflow.md#setup)
-* [Checkout](git-workflow.md#checkout)
-* [Edit](git-workflow.md#edit)   
-* [Add](git-workflow.md#add)
-* [Commit](git-workflow.md#commit)
-* [Push](git-workflow.md#push)
-* [Merge](git-workflow.md#merge)
+* [Setup](git-workflow-github.md#setup)
+* [Checkout](git-workflow-github.md#checkout)
+* [Edit](git-workflow-github.md#edit)   
+* [Add](git-workflow-github.md#add)
+* [Commit](git-workflow-github.md#commit)
+* [Push](git-workflow-github.md#push)
+* [Merge](git-workflow-github.md#merge)
 
 Would you prefer not to use the Atom Text Editor? We also have documentation for [Git in the command line](git-command-line.md).
 
@@ -28,7 +28,7 @@ This section covers the setup procedures for Atom and Git.
 
 #### _Atom Text Editor Setup_
 
-While there are many text editors to choose from, Atom is recommended due to its ability to be customized and integrated with GitLab/Git.
+While there are many text editors to choose from, Atom is recommended due to its ability to be customized and integrated with GitHub/Git.
 
 > Install Atom: [https://atom.io/](https://atom.io/)
 
@@ -41,15 +41,15 @@ Atom has several packages which enhance the user experience and some of them you
   * linter \(aids in code validation, will also need linter package for each language\)
   * minimap \(displays thumbnail version of document along with your location within it\)
   * todo-show \(provides visuals for TODO and FIXME tags\)
-* Navigate to the GitLab repository in your web browser. For this example, we'll use the `user-documentation` repository. Copy the SSH address to your machine's clipboard.   
+* Navigate to the GitHub repository in your web browser. For this example, we'll use the `user-documentation` repository. Copy the SSH address to your machine's clipboard.   
 
   [![](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-repo-ssh-address.png)](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-repo-ssh-address.png)   
 
-* _\(Optional\)_ Consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:   
-  * Click on your user image in the top-right of the GitLab window.
-  * Select `Settings`.
-  * On the left, click `SSH keys`.
-  * Paste your _**public**_ SSH key in the box, provide a title, and save by clicking `Add key`.
+* _\(Optional\)_ Consider adding your SSH key to your GitHub profile so you are not prompted for credentials after every commit. To add your public SSH key to GitHub:   
+  - Click on your user image in the top-right of the GitHub window.
+  - Select `Settings`.
+  - On the left, click `SSH and GPG keys`, then `New SSH key`.
+  - Paste your _**public**_ SSH key in the box, provide a title, and save by clicking `Add SSH key`.
 * Now, back inside Atom, open the `Command Palette`. On Mac, press `shift`+`command`+`p`. In Windows/Linux, press `control`+`shift`+`p`.
 * Type `git clone` and press `enter`.
 * Paste the SSH address in the resulting window. You may also modify the location of the local folder.
@@ -89,7 +89,7 @@ Atom has several packages which enhance the user experience and some of them you
 
     * Windows: download [Git for Windows](https://gitforwindows.org/) and install it.
 
-* Set up Git with your access credentials to GitLab with the following commands:
+* Set up Git with your access credentials to GitHub with the following commands:
 
   ```bash
   git config --global user.name "your_username"
@@ -114,7 +114,7 @@ At this point, you likely either want to create a new branch and add your contri
 
 We need the name of the remote branch we wish to work on
 
-1. The GitLab project page displays a droplist with the name of available branches.   
+1. The GitHub project page displays a droplist with the name of available branches.   
 
    [![](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-show-branches.png)](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-show-branches.png)   
 
@@ -124,7 +124,7 @@ We need the name of the remote branch we wish to work on
 
    You may also open the checkout dialog directly using the hotkeys `ctrl`+`alt`+`shift`+`c` \(or `ctrl`+`opt`+`shift`+`c` on Mac\).   
 
-   * The checkout dialog is a list of branches to checkout or switch to. Using the arrow keys, highlight the `custom` entry and hit enter. Now type in the name of the remote branch name. You may find this in GitLab.   
+   * The checkout dialog is a list of branches to checkout or switch to. Using the arrow keys, highlight the `custom` entry and hit enter. Now type in the name of the remote branch name. You may find this in GitHub.   
 
      [![](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-checkout-provide-branch.png)](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-checkout-provide-branch.png)   
 
@@ -155,9 +155,9 @@ Checkout a remote branch from the command line. `git checkout --track origin/wen
 
 Once you clone a repository, it opens automatically in Atom. However, if you need to open the repository again, click on `File` → `Add Project Folder` and select your repository. Select files from the directory tree on the right of the Atom screen. Make your edits and save your changes.
 
-#### _GitLab GUI Editing_
+#### _GitHub GUI Editing_
 
-You do not have to use Atom for editing. You can click the `edit` button in GitLab, edit directly from the webpage, and preview before committing. Note that only repository owners can edit this way - otherwise, you can create a branch and edit your branch.
+You do not have to use Atom for editing. You can click the `edit` button in GitHub, edit directly from the webpage, and preview before committing. Note that only repository owners can edit this way - otherwise, you can create a branch and edit your branch.
 
 ## Add
 
@@ -172,21 +172,16 @@ You do not have to use Atom for editing. You can click the `edit` button in GitL
 
 ## Push
 
-* Push changes to GitLab by typing `git push` in the command palette, or using Atom's up/down Git arrows located on the bottom-right of the window.
+* Push changes to GitHub by typing `git push` in the command palette, or using Atom's up/down Git arrows located on the bottom-right of the window.
 
 📝 **Note:** If you get an error after typing `git push` that says "No upstream branch" open your terminal and navigate to the local copy of the repository. Then type `git push --set-upstream origin name_of_branch`. From then on you should be able to use the command palette to type `git push` or use the up/down arrows on the bottom-right of the window.
 
 ## Merge
 
-At this time, GitLab does not natively support submissions for merge requests via the command line.
+At this time, GitHub does not natively support submissions for merge requests via the command line.
 
-You can create a merge request using the GitLab GUI.
+You can create a merge request using the GitHub GUI.
 
-1. From the left menu panel in Gitlab, select `Merge Request` then the green `New merge request` button.
-2. Select your branch in the "Source Branch" side.
-   * Target branch is _master_.
-   * Click `compare branches`.
-3. On the next screen the only thing needed is:
-   * Assign to: _&lt; Project Owner, etc. &gt;_
-   * Click `Submit merge request`.
-
+- When viewing the repository on the GitHub website, click the button `New pull request`.
+- Select the "base" branch. This will be `master`. Then select the "compare" branch: `add-readme`.
+- Now click `Create pull request`.

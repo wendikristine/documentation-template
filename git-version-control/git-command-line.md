@@ -1,6 +1,6 @@
 # Git in the Command Line
 
-There are many reasons one would prefer to work from the command line. Regardless of your reasons, here is how to use Git/GitLab using only command line tools.
+There are many reasons one would prefer to work from the command line. Regardless of your reasons, here is how to use Git/GitHub using only command line tools.
 
 [![](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-workflow-steps.png)](https://github.com/wendikristine/documentation-template/tree/62a326e16ecef2ff128ef0b976de12c16f6ea062/git-version-control/screenshots/git-workflow-steps.png)
 
@@ -51,7 +51,7 @@ It is assumed that users of this guide understand basic Git/version control prin
 
     * Windows: download [Git for Windows](https://gitforwindows.org/) and install it.
 
-* Setup Git with your access credentials to GitLab with the following commands:
+* Setup Git with your access credentials to GitHub with the following commands:
 
   ```bash
   git config --global user.name "your_username"
@@ -60,11 +60,11 @@ It is assumed that users of this guide understand basic Git/version control prin
 
   * You can review the information that you entered during set-up: `git config --global --list`
 
-* _\(Optional\)_ Consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:
-  * Click on your user image in the top-right of the GitLab window.
-  * Select `Settings`.
-  * On the left, click `SSH keys`.
-  * Paste your _**public**_ ssh key in the box, provide a title, and save by clicking `Add key`.
+* _(Optional)_ Consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:
+  - Click on your user image in the top-right of the GitHub window.
+  - Select `Settings`.
+  - On the left, click `SSH and GPG keys`, then `New SSH key`.
+  - Paste your _**public**_ SSH key in the box, provide a title, and save by clicking `Add SSH key`.
 * Clone an existing repository. In GitLab, this information is found on the "Overview" page of the repository.
 
   ```bash
@@ -99,7 +99,7 @@ It is assumed that users of this guide understand basic Git/version control prin
 
 ## Commit
 
-* When you have added \(or staged\) all of your changes, committing them prepares them for the push to the remote branch.
+* When you have added (or staged) all of your changes, committing them prepares them for the push to the remote branch.
 
   ```bash
   git commit -m "descriptive text about your changes"
@@ -121,11 +121,6 @@ At this time, GitLab does not natively support submissions for merge requests vi
 
 You can send a merge request using the GitLab GUI.
 
-1. From the left menu panel in Gitlab, select `Merge Request` then the green `New merge request` button.
-2. Select your branch in the "Source Branch" side.
-   * Target branch is _master_.
-   * Click `compare branches`.
-3. On the next screen the only thing needed is:
-   * Assign to: _&lt; Project Owner, etc. &gt;_
-   * Click `Submit merge request`.
-
+- When viewing the repository on the GitHub website, click the button `New pull request`.
+- Select the "base" branch. This will be `master`. Then select the "compare" branch: `add-readme`.
+- Now click `Create pull request`.
