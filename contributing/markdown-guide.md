@@ -20,9 +20,9 @@ Markdown is a simple way to format text for display on a website.
 ###### This is an <h6> tag
 ```
 
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
+# This is an \<h1\> tag
+## This is an \<h2\> tag
+###### This is an \<h6\> tag
 
 
 ### Emphasis (Bold, Italic)
@@ -68,6 +68,8 @@ _Unordered_
 
 
 _Ordered_
+
+You do not need to manually number your ordered list. Subsequent items in the list will be automatically numbered if you use `-` instead of numbers.
 
 ```
 1. Item 1
@@ -149,12 +151,12 @@ Image syntax allows for alternative text. The format is `![alt text](URL)`. The 
 
 ```
 ![Org Logo](../logo_square.png)
-![Org Logo](https://github.com/wendikristine/documentation-template/blob/master/logo_square.png)
+![Org Logo](https://raw.githubusercontent.com/wendikristine/documentation-template/master/logo_square.png)
 ```
 
-![Org Logo](/images/logo.png)
+![Org Logo](../logo_square.png)
 
-![Org Logo](https://github.com/wendikristine/documentation-template/blob/master/logo_square.png)
+![Org Logo](https://raw.githubusercontent.com/wendikristine/documentation-template/master/logo_square.png)
 
 ### Links
 
@@ -163,10 +165,10 @@ Links are created automatically in most cases (and always on Github). Or, you ca
 http://github.com - automatic!
 
 ```
-[GitHub](http://github.com)
+[GitHub](http://github.com) link
 ```
 
-[GitHub](http://github.com)
+[GitHub](http://github.com) link
 
 
 ### Block Quotes
@@ -175,6 +177,7 @@ http://github.com - automatic!
 > "Not enough blinky lights."
 > - Henry Neeman, SiPE 2018
 ```
+
 
 > "Not enough blinky lights."   
 > ~ Henry Neeman, SiPE 2018
@@ -207,7 +210,7 @@ function fancyAlert(arg) {
     $.facebox({div:'#foo'})
   }
 }
-
+```
 
 
 ```javascript
@@ -228,6 +231,13 @@ You can also simply indent your code by four spaces:
     }
 
 
+### Horizontal Rule
+
+```
+---
+```
+
+---
 
 
 ### Emoji
