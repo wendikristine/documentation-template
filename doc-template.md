@@ -35,7 +35,7 @@ _If you do not already have one, please create an account at [Github](https://gi
 
 Once you have created an account at GitHub, you can "fork" my template repository so that a copy of it will appear as a repository that belongs to you.
 
-- Navigate to the template repository at https://github.com/wendikristine/documentation-template
+- Navigate to the template repository at <https://github.com/wendikristine/documentation-template>
 - On the top right of the screen, click the `Fork` button, then choose the organization or location where you would like the repository to be forked.
 
 After the repository has been forked, you are ready to move to the GitBook setup.
